@@ -9,17 +9,17 @@ import p3Logo from "../../Assets/Companies/p3.png";
 
 function Experience() {
   return (
-    <Container fluid className="project-section">
+    <Container fluid className="Experience-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
+        <h1 className="Experience-heading">
           Professional <strong className="purple">Experience</strong>
         </h1>
         <p style={{ color: "white" }}>
           A snapshot of the roles and responsibilities I’ve held across industries.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+          <Col md={4} className="Experience-card">
             <ExperienceCard
               imgPath={blumeLogo}
               title="Blume Global"
@@ -28,7 +28,7 @@ function Experience() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="Experience-card">
             <ExperienceCard
               imgPath={nexteerLogo}
               title="Nexteer Automotive"
@@ -37,7 +37,7 @@ function Experience() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="Experience-card">
             <ExperienceCard
               imgPath={thoughtfocusLogo}
               title="ThoughtFocus"
@@ -46,7 +46,7 @@ function Experience() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="Experience-card">
             <ExperienceCard
               imgPath={p3Logo}
               title="P3 Consulting & Engineering"

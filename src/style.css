@@ -442,16 +442,16 @@ button:focus {
   color: #a588c0 !important;
 }
 /* --------- */
-/* Projects */
+/* Experience */
 /* --------- */
-.project-section {
+.Experience-section {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
 }
 
-.project-card {
+.Experience-card {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
   padding-left: 25px !important;
@@ -459,7 +459,7 @@ button:focus {
   height: auto !important;
 }
 
-.project-card-view {
+.Experience-card-view {
   box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
   color: white !important;
   background-color: transparent !important;
@@ -467,7 +467,7 @@ button:focus {
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
-.project-card-view:hover {
+.Experience-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
@@ -494,7 +494,7 @@ button:focus {
   outline: none !important;
   box-shadow: none !important;
 }
-.project-heading {
+.Experience-heading {
   color: white !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
