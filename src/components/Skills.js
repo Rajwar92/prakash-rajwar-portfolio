@@ -9,15 +9,17 @@ function Skills() {
   ];
 
   return (
-    <section id="skills" className="skills">
+    <section id="skills" className="skills" aria-labelledby="skills-heading">
       <div className="container">
-        <h2>Skills</h2>
+        <h2 id="skills-heading" className="section-title">Skills</h2>
         <div className="skills-grid">
           {skills.map((group, idx) => (
             <div key={idx} className="skill-group">
-              <h4>{group.category}</h4>
-              <ul>
-                {group.items.map((item, i) => <li key={i}>{item}</li>)}
+              <h4 className="skill-category">{group.category}</h4>
+              <ul className="skill-list">
+                {group.items.map((item, i) => (
+                  <li key={i} className="skill-item">{item}</li>
+                ))}
               </ul>
             </div>
           ))}

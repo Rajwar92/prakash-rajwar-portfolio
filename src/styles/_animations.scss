@@ -2,3 +2,16 @@
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+.section-divider {
+  height: 6px;
+  width: 80px;
+  background: linear-gradient(to right, $primary, $secondary);
+  margin: 20px auto;
+  border-radius: 4px;
+  animation: pulse-divider 2s infinite;
+}
+
+@keyframes pulse-divider {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(1.3); }
+}
