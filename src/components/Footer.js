@@ -1,48 +1,70 @@
-import React from 'react';
-import '../styles/_footer.scss'; // Make sure _footer.scss starts with @import 'variables';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import {
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiFillInstagram,
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
-  const year = new Date().getFullYear();
-
+  let date = new Date();
+  let year = date.getFullYear();
   return (
-    <footer className="footer" role="contentinfo">
-      <div className="footer-container container">
-        <p className="footer-copy">© {year} Prakash Rajwar. All rights reserved.</p>
-
-        <ul className="footer-social">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/prakash-rajwar88"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-            >
-              <i className="fab fa-linkedin" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/ronnj18"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Twitter"
-            >
-              <i className="fab fa-twitter" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://instagram.com/ronngjacob"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-            >
-              <i className="fab fa-instagram" aria-hidden="true"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+    <Container fluid className="footer">
+      <Row>
+        <Col md="4" className="footer-copywright">
+          <h3>Designed and Developed by Prakash Rajwar</h3>
+        </Col>
+        <Col md="4" className="footer-copywright">
+          <h3>Copyright © {year} PR</h3>
+        </Col>
+        <Col md="4" className="footer-body">
+          <ul className="footer-icons">
+            <li className="social-icons">
+              <a
+                href="https://github.com/prakashrajwar"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillGithub />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://twitter.com/prakashrajwar"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiOutlineTwitter />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.linkedin.com/in/prakashrajwar/"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.instagram.com/prakashrajwar"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillInstagram />
+              </a>
+            </li>
+          </ul>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
