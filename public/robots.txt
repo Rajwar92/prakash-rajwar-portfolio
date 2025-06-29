@@ -1,3 +1,8 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+// public/assets/images/
+// [Add image files: profilepic.jpg, logo.png, oxygen-icon.png, background-pattern.png]
+
+// public/assets/documents/
+// [Add Resume_Prakash_Rajwar.pdf file]
