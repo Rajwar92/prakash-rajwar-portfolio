@@ -13,7 +13,7 @@ function AboutCard() {
             <br />
             I work as a Senior Technical Writer and Documentation Specialist with over 10 years of experience.
             <br />
-            My background spans SaaS, automotive, and aviation industries — focusing on developer-friendly docs, APIs, and scalable content systems.
+            My background spans SaaS, automotive, and aviation industries; focusing on developer-friendly docs, APIs, and scalable content systems.
             <br />
             <br />
             Outside of work, I enjoy:
@@ -31,7 +31,7 @@ function AboutCard() {
           </ul>
 
           <p style={{ color: "rgb(155 126 172)", marginTop: "1rem" }}>
-            “Documentation is not just about writing — it's about clarity, structure, and empathy for the reader.”
+            “Documentation is not just about writing; it's about clarity, structure, and empathy for the reader.”
           </p>
           <footer className="blockquote-footer">Prakash Rajwar</footer>
         </blockquote>

@@ -16,7 +16,7 @@ function Experience() {
           Professional <strong className="purple">Experience</strong>
         </h1>
         <p style={{ color: "white" }}>
-          A snapshot of the roles and responsibilities I’ve held across industries.
+          A snapshot of the roles and responsibilities I've held across industries.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="Experience-card">
