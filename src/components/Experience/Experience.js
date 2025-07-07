@@ -1,4 +1,5 @@
 import React from "react";
+import Tree from "react-d3-tree";
 import { Container, Row, Col } from "react-bootstrap";
 import ExperienceCard from "./ExperienceCards";
 import Particle from "../Particle";
@@ -8,53 +9,61 @@ import thoughtfocusLogo from "../../Assets/Companies/thoughtfocus.png";
 import p3Logo from "../../Assets/Companies/p3.png";
 
 function Experience() {
+  const experienceTreeData = {
+    name: "Professional Experience",
+    children: [
+      {
+        name: "Blume Global (2021–Present)",
+        attributes: {
+          Role: "Sr. Specialist – Technical & Product Documentation",
+          Description:
+            "Lead end-user content including user guides, release notes, and API docs. Mentored team members and collaborated with Product Managers and Developers.",
+          Link: "https://www.blumeglobal.com",
+        },
+      },
+      {
+        name: "Nexteer Automotive (2020–2021)",
+        attributes: {
+          Role: "Senior Technical Writer",
+          Description:
+            "Created documentation using IBM JAZZ, DOORS, and Rational Change. Focused on version control, requirement traceability, and procedural documentation.",
+          Link: "https://www.nexteer.com",
+        },
+      },
+      {
+        name: "ThoughtFocus (2019–2020)",
+        attributes: {
+          Role: "Senior Engineer – Tech Docs",
+          Description:
+            "Authored STE-based IFE software manuals and led SME interviews, quality reviews, and structured documentation sets for aviation.",
+          Link: "https://www.thoughtfocus.com",
+        },
+      },
+      {
+        name: "P3 Consulting & Engineering (2014–2019)",
+        attributes: {
+          Role: "Tech Pub Engineer",
+          Description:
+            "Led a documentation team. Managed ATA documentation (iSpec2200) for Lufthansa Technik and worked onsite in Hamburg, using Arbortext Editor and Oxygen XML.",
+          Link: "https://www.p3-group.com",
+        },
+      },
+    ],
+  };
+
   return (
     <Container fluid className="Experience-section">
       <Particle />
       <Container>
-        <h1 className="Experience-heading">
-          Professional <strong className="purple">Experience</strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          A snapshot of the roles and responsibilities I've held across industries.
-        </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="Experience-card">
-            <ExperienceCard
-              imgPath={blumeLogo}
-              title="Blume Global"
-              description="As Sr. Specialist – Technical & Product Documentation (2021–Present), I lead end-user content including user guides, release notes, and API docs. I’ve mentored team members and collaborated closely with Product Managers and Developers."
-              demoLink="https://www.blumeglobal.com"
-            />
-          </Col>
-
-          <Col md={4} className="Experience-card">
-            <ExperienceCard
-              imgPath={nexteerLogo}
-              title="Nexteer Automotive"
-              description="Worked as Senior Technical Writer (2020–2021), creating documentation using IBM JAZZ, DOORS, and Rational Change. Focused on version control, requirement traceability, and procedural documentation."
-              demoLink="https://www.nexteer.com"
-            />
-          </Col>
-
-          <Col md={4} className="Experience-card">
-            <ExperienceCard
-              imgPath={thoughtfocusLogo}
-              title="ThoughtFocus"
-              description="Served as Senior Engineer – Tech Docs (2019–2020). Authored STE-based IFE software manuals and led SME interviews, quality reviews, and structured documentation sets for aviation."
-              demoLink="https://www.thoughtfocus.com"
-            />
-          </Col>
-
-          <Col md={4} className="Experience-card">
-            <ExperienceCard
-              imgPath={p3Logo}
-              title="P3 Consulting & Engineering"
-              description="From 2014 to 2019, I led a documentation team as a Tech Pub Engineer. Managed ATA documentation (iSpec2200) for Lufthansa Technik and worked onsite in Hamburg, using Arbortext Editor and Oxygen XML."
-              demoLink="https://www.p3-group.com"
-            />
-          </Col>
-        </Row>
+        <div style={{ width: "100%", height: "600px" }}>
+          <h1 className="Experience-heading">
+            Professional <strong className="purple">Experience</strong>
+          </h1>
+          <p style={{ color: "white" }}>
+            A snapshot of the roles and responsibilities I've held across industries.
+          </p>
+          <Tree data={experienceTreeData} orientation="vertical" />
+        </div>
       </Container>
     </Container>
   );
